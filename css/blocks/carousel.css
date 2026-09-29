@@ -19,18 +19,12 @@
   gap: 20px;
 }
 
-.carousel__button:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-
 .carousel__track {
   display: flex;
   gap: 24px;
   margin-top: 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   scrollbar-width: none;
 }
 

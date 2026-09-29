@@ -80,12 +80,6 @@
   height: 28px;
 }
 
-.newsletter__note {
-  margin-top: 12px;
-  font-size: 14px;
-  line-height: 17.5px;
-}
-
 @media (max-width: 768px) {
   .newsletter {
     min-height: 0;
