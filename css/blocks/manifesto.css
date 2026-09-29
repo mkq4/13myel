@@ -1,0 +1,49 @@
+.manifesto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 119px;
+}
+
+.manifesto__title {
+  max-width: 850px;
+  font-size: 64px;
+  line-height: 64px;
+}
+
+.manifesto__subtitle {
+  margin-top: 31px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.manifesto__link {
+  flex-shrink: 0;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 22.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .manifesto {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .manifesto__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .manifesto__subtitle {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .manifesto__link {
+    margin-top: 0;
+  }
+}

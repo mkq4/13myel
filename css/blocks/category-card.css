@@ -1,0 +1,19 @@
+.category-card {
+  position: relative;
+  display: block;
+}
+
+.category-card__image {
+  width: 100%;
+  aspect-ratio: 421 / 548;
+  object-fit: cover;
+}
+
+.category-card__title {
+  position: absolute;
+  left: 20px;
+  bottom: 6px;
+  font-size: 32px;
+  line-height: 42px;
+  color: var(--color-text-inverse);
+}

@@ -1,0 +1,66 @@
+.ethics {
+  margin-block: 127px 50px;
+}
+
+.ethics__title {
+  max-width: 630px;
+  font-size: 43px;
+  line-height: 60px;
+}
+
+.ethics__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 84px;
+}
+
+.ethics__icon {
+  margin-inline: auto;
+}
+
+.ethics__number {
+  margin-top: 68px;
+  font-size: 36px;
+  line-height: 45px;
+}
+
+.ethics__text {
+  max-width: 400px;
+  margin-top: 72px;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.ethics__link {
+  display: inline-block;
+  margin-top: 55px;
+  font-size: 18px;
+  line-height: 22.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .ethics {
+    margin-top: 80px;
+  }
+
+  .ethics__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .ethics__list {
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+    margin-top: 48px;
+  }
+
+  .ethics__number {
+    margin-top: 24px;
+  }
+
+  .ethics__text {
+    margin-top: 16px;
+  }
+}

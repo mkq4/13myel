@@ -1,0 +1,18 @@
+.arrivals {
+  margin-block: 153px 50px;
+}
+
+.arrivals__more {
+  display: block;
+  width: fit-content;
+  margin: 47px auto 0;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .arrivals {
+    margin-top: 80px;
+  }
+}

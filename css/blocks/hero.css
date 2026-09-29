@@ -1,0 +1,10 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hero__image {
+  width: 100%;
+  aspect-ratio: 480 / 624;
+  object-fit: cover;
+}

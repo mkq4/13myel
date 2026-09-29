@@ -1,0 +1,8 @@
+.lang {
+  display: flex;
+  gap: 5px;
+}
+
+.lang__link {
+  color: var(--color-inactive);
+}

@@ -1,0 +1,11 @@
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 17.5px;
+  text-align: center;
+  background-color: var(--color-accent);
+}

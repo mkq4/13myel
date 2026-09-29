@@ -1,0 +1,32 @@
+.product-card {
+  position: relative;
+}
+
+.product-card__image {
+  width: 100%;
+  aspect-ratio: 421 / 548;
+  padding-top: 110px;
+  object-fit: contain;
+}
+
+.product-card__title {
+  position: absolute;
+  top: 62px;
+  left: 22px;
+  right: 22px;
+  font-size: 16px;
+  line-height: 21.6px;
+}
+
+.product-card__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-inline: 22px;
+}
+
+.product-card__price,
+.product-card__link {
+  font-size: 14px;
+  line-height: 17.5px;
+}

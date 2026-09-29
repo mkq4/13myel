@@ -5,269 +5,304 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MYEL — Responsible high-end jewelry</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="page">
+<body>
   <p class="promo">Free shipping on orders over $150 over Canada</p>
 
   <header class="header">
-    <button class="header__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-      <span class="header__toggle-line"></span>
-      <span class="header__toggle-line"></span>
-      <span class="header__toggle-line"></span>
-    </button>
-    <nav class="header__nav header__nav--left" id="nav">
+    <nav class="header__nav" aria-label="Catalog">
       <ul class="header__list">
-        <li><a class="header__link" href="#shop">Shop By</a></li>
-        <li><a class="header__link" href="#collections">Collections</a></li>
+        <li><a class="header__link" href="#categories">Shop by</a></li>
+        <li><a class="header__link" href="#arrivals">Collections</a></li>
       </ul>
     </nav>
-    <img class="header__logo" src="images/logo.svg" alt="MYEL">
-    <nav class="header__nav header__nav--right">
-      <ul class="header__list">
-        <li><a class="header__link" href="#about">About us</a></li>
-        <li>
-          <a class="header__link" href="#newsletter">Login</a>
-          <p class="header__language"><span class="header__language--unabled">Fr</span> | En</p>
-          <span>0</span>
-        </li>
 
-      </ul>
-    </nav>
+    <a class="header__logo" href="/">
+      <img src="images/logo.svg" width="140" height="38" alt="MYEL">
+    </a>
+
+    <div class="header__side">
+      <a class="header__link" href="#about">About us</a>
+      <div class="header__actions">
+        <a class="header__link" href="#">Login</a>
+        <div class="lang header__lang">
+          <a class="lang__link" href="#" hreflang="fr">Fr</a>
+          <span class="lang__divider" aria-hidden="true">|</span>
+          <span class="lang__current">En</span>
+        </div>
+        <a class="header__cart" href="#" aria-label="Cart: 0 items">0</a>
+      </div>
+    </div>
   </header>
 
   <main>
     <section class="hero" aria-label="Featured looks">
-        <img class="hero__image" src="images/hero-signet.png" alt="Model wearing a modern signet ring">
-        <img class="hero__image" src="images/hero-fairmined.png" alt="Fairmined gold rings on a branch">
-        <img class="hero__image" src="images/portrait.png" alt="Portrait with layered necklaces">
+      <img class="hero__image" src="images/hero-1.jpg" width="480" height="624" alt="Hands wearing gold signet rings">
+      <img class="hero__image" src="images/hero-2.jpg" width="480" height="624" alt="Gemstone rings on a branch">
+      <img class="hero__image" src="images/hero-3.jpg" width="480" height="624" alt="Model wearing a gold necklace">
     </section>
 
-    <section class="manifesto" id="about">
-      <div class="container">
-        <div class="manifesto__inner">
-          <div class="mainfesto__text">
-            <p class="manifesto__title">Responsible high-end jewelry made in Montreal. MYEL creations are designed to stand the
-        test of time.</p>
-      <p class="manifesto__subtitle">Spontaneous, delicate, audacious, our jewels distinguish themselves with their
-        elegance.</p>
+    <section class="manifesto container" id="about">
+      <div class="manifesto__text">
+        <h1 class="manifesto__title">Responsible high-end jewelry made in Montreal. MYEL creations are designed to stand the test of time.</h1>
+        <p class="manifesto__subtitle">Spontaneous, delicate, audacious, our jewels distinguish themselves with their elegance.</p>
+      </div>
+      <a class="manifesto__link" href="#arrivals">Shop MYEL</a>
+    </section>
+
+    <section class="arrivals container" id="arrivals">
+      <div class="carousel">
+        <div class="carousel__head">
+          <h2 class="carousel__title carousel__title--caps">Shop new arrivals</h2>
+          <div class="carousel__controls">
+            <button class="carousel__button" type="button" data-direction="-1" aria-label="Previous">
+              <img src="images/icons/arrow-left.svg" width="18" height="10" alt="">
+            </button>
+            <button class="carousel__button" type="button" data-direction="1" aria-label="Next">
+              <img src="images/icons/arrow-right.svg" width="18" height="10" alt="">
+            </button>
           </div>
-        <a class="manifesto__link" href="#shop">Shop MYEL</a>
         </div>
+        <ul class="carousel__track">
+          <li class="carousel__item product-card">
+            <img class="product-card__image" src="images/arrival-1.jpg" width="421" height="548" alt="">
+            <h3 class="product-card__title">Stein Necklace in Silver with Aquamarine</h3>
+            <div class="product-card__footer">
+              <p class="product-card__price">$310 CAD</p>
+              <a class="product-card__link" href="#">Shop now</a>
+            </div>
+          </li>
+          <li class="carousel__item product-card">
+            <img class="product-card__image" src="images/arrival-2.jpg" width="421" height="548" alt="">
+            <h3 class="product-card__title">Custom-made Tooth Jewel in Gold</h3>
+            <div class="product-card__footer">
+              <p class="product-card__price">$685 CAD</p>
+              <a class="product-card__link" href="#">Shop now</a>
+            </div>
+          </li>
+          <li class="carousel__item product-card">
+            <img class="product-card__image" src="images/arrival-3.png" width="421" height="548" alt="">
+            <h3 class="product-card__title">Origines Pendant in Yellow Gold with Ethical Birthstone</h3>
+            <div class="product-card__footer">
+              <p class="product-card__price">$280 CAD</p>
+              <a class="product-card__link" href="#">Shop now</a>
+            </div>
+          </li>
+          <li class="carousel__item product-card">
+            <img class="product-card__image" src="images/arrival-4.jpg" width="421" height="548" alt="">
+            <h3 class="product-card__title">Round Galatée Pendant in Silver with Améthyst</h3>
+            <div class="product-card__footer">
+              <p class="product-card__price">$370 CAD</p>
+              <a class="product-card__link" href="#">Shop now</a>
+            </div>
+          </li>
+          <li class="carousel__item product-card">
+            <img class="product-card__image" src="images/arrival-5.jpg" width="421" height="548" alt="">
+            <h3 class="product-card__title">Stein Ring in Silver with an Aquamarine</h3>
+            <div class="product-card__footer">
+              <p class="product-card__price">$370 CAD</p>
+              <a class="product-card__link" href="#">Shop now</a>
+            </div>
+          </li>
+          <li class="carousel__item product-card">
+            <img class="product-card__image" src="images/arrival-6.jpg" width="421" height="548" alt="">
+            <h3 class="product-card__title">Tennis Bracelet in 18K Yellow Gold with Sapphires</h3>
+            <div class="product-card__footer">
+              <p class="product-card__price">$8000 CAD</p>
+              <a class="product-card__link" href="#">Shop now</a>
+            </div>
+          </li>
+        </ul>
+        <div class="carousel__dots" aria-hidden="true"></div>
+      </div>
+      <a class="arrivals__more" href="#">See more</a>
+    </section>
+
+    <section class="feature feature--campaign">
+      <div class="feature__half">
+        <img class="feature__image" src="images/campaign-model.jpg" width="720" height="936" alt="Model wearing the Bonne Mine t-shirt">
+      </div>
+      <div class="feature__half feature__half--content">
+        <img class="feature__image" src="images/campaign-tee.jpg" width="720" height="936" alt="">
+        <h2 class="feature__title feature__title--small">Bonne Mine t-shirt</h2>
+        <a class="feature__link" href="#">Support the fundraising campaign</a>
       </div>
     </section>
 
-    <section class="arrivals" id="shop">
-      <div class="arrivals__head">
-        <h2 class="arrivals__title">Shop New Arrivals</h2>
-        <a class="arrivals__more" href="#categories">See more</a>
-      </div>
-      <ul class="arrivals__grid">
-        <li class="arrivals__item">
-          <img class="arrivals__image" src="images/hero-necklaces.png" alt="Stein Necklace in Silver with Aquamarine">
-          <h3 class="arrivals__name">Stein Necklace in Silver with Aquamarine</h3>
-          <p class="arrivals__price">$310 CAD</p>
-        </li>
-        <li class="arrivals__item">
-          <img class="arrivals__image" src="images/product-earring.png" alt="Custom-made Tooth Jewel in Gold">
-          <h3 class="arrivals__name">Custom-made Tooth Jewel in Gold</h3>
-          <p class="arrivals__price">$685 CAD</p>
-        </li>
-        <li class="arrivals__item">
-          <img class="arrivals__image" src="images/product-branch.jpg" alt="Origines Pendant in Yellow Gold">
-          <h3 class="arrivals__name">Origines Pendant in Yellow Gold with Ethical Birthstone</h3>
-          <p class="arrivals__price">$280 CAD</p>
-        </li>
-        <li class="arrivals__item">
-          <img class="arrivals__image" src="images/product-6.png" alt="Round Galatée Pendant in Silver with Améthyst">
-          <h3 class="arrivals__name">Round Galatée Pendant in Silver with Améthyst</h3>
-          <p class="arrivals__price">$370 CAD</p>
-        </li>
-        <li class="arrivals__item">
-          <img class="arrivals__image" src="images/product-stein-ring.png"
-            alt="Stein Ring in Silver with an Aquamarine">
-          <h3 class="arrivals__name">Stein Ring in Silver with an Aquamarine</h3>
-          <p class="arrivals__price">$370 CAD</p>
-        </li>
-        <li class="arrivals__item">
-          <img class="arrivals__image" src="images/bracelets-pearl.jpg"
-            alt="Tennis Bracelet in 18K Yellow Gold with Sapphires">
-          <h3 class="arrivals__name">Tennis Bracelet in 18K Yellow Gold with Sapphires</h3>
-          <p class="arrivals__price">$8000 CAD</p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="collections" id="collections">
-      <article class="collections__card">
-        <img class="collections__image" src="images/hands-profile.jpg" alt="Hands with gold and silver rings">
-        <h2 class="collections__title">A Modern Signet Ring</h2>
-      </article>
-      <article class="collections__card">
-        <img class="collections__image" src="images/product-branch.jpg" alt="Gemstone rings displayed on a branch">
-        <h2 class="collections__title">Fairmined Gold Collection</h2>
-      </article>
-      <article class="collections__card">
-        <img class="collections__image" src="images/hero-necklaces.png" alt="Fine yellow gold chain necklace">
-        <h2 class="collections__title">Stack the Necklaces</h2>
-      </article>
-    </section>
-
-    <section class="campaign">
-      <div class="campaign__media">
-        <img class="campaign__image" src="images/bonne-mine-model.png" alt="Model wearing the Bonne Mine t-shirt">
-        <img class="campaign__image" src="images/bonne-mine-tee.png" alt="Bonne Mine MYEL t-shirt">
-      </div>
-      <div class="campaign__content">
-        <p class="campaign__eyebrow">Support the fundraising campaign</p>
-        <h2 class="campaign__title">Bonne Mine t-shirt</h2>
-        <p class="campaign__text">Together, we can build a brighter tomorrow. We use ethical stones and the most
-          eco-responsible raw material possible.</p>
-        <a class="campaign__link" href="#newsletter">Learn More</a>
+    <section class="categories container" id="categories">
+      <div class="carousel">
+        <div class="carousel__head">
+          <h2 class="carousel__title">Browse by categories</h2>
+          <div class="carousel__controls">
+            <button class="carousel__button" type="button" data-direction="-1" aria-label="Previous">
+              <img src="images/icons/arrow-left.svg" width="18" height="10" alt="">
+            </button>
+            <button class="carousel__button" type="button" data-direction="1" aria-label="Next">
+              <img src="images/icons/arrow-right.svg" width="18" height="10" alt="">
+            </button>
+          </div>
+        </div>
+        <ul class="carousel__track">
+          <li class="carousel__item">
+            <a class="category-card" href="#">
+              <img class="category-card__image" src="images/category-rings.jpg" width="421" height="548" alt="">
+              <h3 class="category-card__title">Rings</h3>
+            </a>
+          </li>
+          <li class="carousel__item">
+            <a class="category-card" href="#">
+              <img class="category-card__image" src="images/category-bracelets.jpg" width="421" height="548" alt="">
+              <h3 class="category-card__title">Bracelets</h3>
+            </a>
+          </li>
+          <li class="carousel__item">
+            <a class="category-card" href="#">
+              <img class="category-card__image" src="images/category-earrings.jpg" width="421" height="548" alt="">
+              <h3 class="category-card__title">Earrings</h3>
+            </a>
+          </li>
+          <li class="carousel__item">
+            <a class="category-card" href="#">
+              <img class="category-card__image" src="images/category-necklaces.png" width="421" height="548" alt="">
+              <h3 class="category-card__title">Necklaces</h3>
+            </a>
+          </li>
+        </ul>
+        <div class="carousel__dots" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section class="gallery" aria-label="Lifestyle">
-      <img class="gallery__image" src="images/lifestyle-rings.png" alt="Gold rings on hands">
-      <img class="gallery__image" src="images/lifestyle-bracelets.png" alt="Gold bracelets with pearls">
-      <img class="gallery__image" src="images/lifestyle-earrings.png" alt="Gold hoop earring">
+    <section class="feature feature--books">
+      <div class="feature__half">
+        <img class="feature__image" src="images/books-stack.jpg" width="720" height="936" alt="Stack of Assouline travel books">
+        <h2 class="feature__caption">One-of-a-kind books</h2>
+      </div>
+      <div class="feature__half">
+        <img class="feature__image" src="images/books-cover.png" width="720" height="936" alt="Marrakech Flair book by Assouline">
+      </div>
     </section>
 
-    <section class="ethics">
-      <h2 class="ethics__title">Better Without Mercury</h2>
+    <section class="ethics container">
+      <h2 class="ethics__title">Together, we can build a brighter tomorrow. We use ethical stones and the most eco-responsible raw material possible.</h2>
       <ul class="ethics__list">
-        <li class="ethics__item">Our jewelry is designed and produced locally in Montreal.</li>
-        <li class="ethics__item">MYEL is a member of the Ethical Metalsmith Association.</li>
-        <li class="ethics__item">We create high end jewelry, designed to stand the test of time.</li>
+        <li class="ethics__item">
+          <img class="ethics__icon" src="images/ethics-1.png" width="233" height="233" alt="">
+          <p class="ethics__number">01</p>
+          <p class="ethics__text">Our jewelry is designed and produced locally in Montreal.</p>
+        </li>
+        <li class="ethics__item">
+          <img class="ethics__icon" src="images/ethics-2.png" width="233" height="233" alt="">
+          <p class="ethics__number">02</p>
+          <p class="ethics__text">MYEL is a member of the Ethical Metalsmith Association.</p>
+        </li>
+        <li class="ethics__item">
+          <img class="ethics__icon" src="images/ethics-3.png" width="233" height="233" alt="">
+          <p class="ethics__number">03</p>
+          <p class="ethics__text">We create high end jewelry, designed to stand the test of time.</p>
+        </li>
       </ul>
-      <a class="ethics__link" href="#about">Learn More</a>
+      <a class="ethics__link" href="#about">Learn more</a>
     </section>
 
-    <section class="fairmined">
-      <div class="fairmined__content">
-        <p class="fairmined__tag">#EVERYGRAMCOUNTS</p>
-        <h2 class="fairmined__title">Fairmined Gold: choose ethical gold</h2>
-        <a class="fairmined__link" href="#shop">Shop Fairmined Gold</a>
+    <section class="feature feature--fairmined">
+      <div class="feature__half">
+        <img class="feature__image" src="images/fairmined-rings.jpg" width="720" height="936" alt="Collection of fairmined gold rings on linen">
+        <p class="feature__caption">#EVERYGRAMCOUNTS</p>
       </div>
-      <img class="fairmined__image" src="images/rings-linen.png" alt="Collection of fairmined gold rings">
-    </section>
-
-    <section class="books">
-      <div class="books__media">
-        <img class="books__image" src="images/books-stack.jpg" alt="Stack of Assouline travel books">
-        <img class="books__image books__image--cover" src="images/book-marrakech.png"
-          alt="Marrakech Flair Assouline book">
-      </div>
-      <div class="books__content">
-        <h2 class="books__title">One-of-a-kind books</h2>
-        <p class="books__text">A pleasure for the mind and the eyes</p>
-        <a class="books__link" href="#newsletter">Buy your Assouline books at MYEL</a>
+      <div class="feature__half feature__half--content">
+        <img class="feature__image" src="images/fairmined-ring.jpg" width="720" height="936" alt="">
+        <h2 class="feature__title">Fairmined Gold: choose ethical gold</h2>
+        <a class="feature__link" href="#">Shop Fairmined Gold</a>
       </div>
     </section>
 
-    <section class="values">
-      <article class="values__item">
-        <img class="values__icon" src="images/sketch-3.png" alt="">
-        <h3 class="values__title">Fair Price</h3>
-      </article>
-      <article class="values__item">
-        <img class="values__icon" src="images/sketch-1.png" alt="">
-        <h3 class="values__title">Made in Montreal</h3>
-      </article>
-      <article class="values__item">
-        <img class="values__icon" src="images/sketch-4.png" alt="">
-        <h3 class="values__title">Exceptional Quality</h3>
-      </article>
-    </section>
-
-    <section class="spotlight">
-      <img class="spotlight__image" src="images/rings-collection.jpg" alt="Rings arranged on linen">
-      <div class="spotlight__product">
-        <img class="spotlight__thumb" src="images/product-stein-ring.png" alt="Stein ring with aquamarine">
-        <h2 class="spotlight__title">Stein Ring in Silver with an Aquamarine</h2>
-        <p class="spotlight__price">$370 CAD</p>
-        <a class="spotlight__link" href="#shop">Shop now</a>
-      </div>
-    </section>
-
-    <section class="categories" id="categories">
-      <h2 class="categories__title">Browse by categories</h2>
-      <ul class="categories__list">
-        <li><a class="categories__link" href="#shop">Rings</a></li>
-        <li><a class="categories__link" href="#shop">Earrings</a></li>
-        <li><a class="categories__link" href="#shop">Bracelets</a></li>
-        <li><a class="categories__link" href="#shop">Necklaces</a></li>
+    <section class="newsletter">
+      <img class="newsletter__image" src="images/newsletter.jpg" width="1440" height="547" alt="">
+      <ul class="newsletter__perks container">
+        <li class="newsletter__perk">Exceptional Quality</li>
+        <li class="newsletter__perk">Fair Price</li>
+        <li class="newsletter__perk">Made in Montreal</li>
       </ul>
-      <a class="categories__cta" href="#shop">Shop Now</a>
-    </section>
-
-    <section class="banner">
-      <img class="banner__image" src="images/banner-hand.jpg" alt="Hand with delicate gold rings">
-    </section>
-
-    <section class="newsletter" id="newsletter">
-      <h2 class="newsletter__title">Subscribe to our newsletter.</h2>
-      <p class="newsletter__text">Receive exclusive news and special promo codes.</p>
-      <form class="newsletter__form" action="#" method="post">
-        <label class="visually-hidden" for="email">Email</label>
-        <input class="newsletter__input" id="email" name="email" type="email" placeholder="Email" required>
-        <button class="newsletter__button" type="submit">Subscribe</button>
-      </form>
-      <p class="newsletter__note" hidden>Thank you for subscribing.</p>
+      <div class="newsletter__body container">
+        <h2 class="newsletter__title">Subscribe to our newsletter.</h2>
+        <p class="newsletter__text">Receive exclusive news and special promo codes.</p>
+        <form class="newsletter__form" action="#" method="post">
+          <label class="visually-hidden" for="email">Email</label>
+          <input class="newsletter__input" id="email" name="email" type="email" required>
+          <button class="newsletter__button" type="submit" aria-label="Subscribe">
+            <img src="images/icons/arrow-long.svg" width="21" height="8" alt="">
+          </button>
+        </form>
+        <p class="newsletter__note" role="status" hidden>Thank you for subscribing.</p>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer__grid">
-      <section class="footer__col">
-        <h2 class="footer__heading">Shop By</h2>
-        <ul class="footer__list">
-          <li><a class="footer__link" href="#shop">New Arrivals</a></li>
-          <li><a class="footer__link" href="#shop">Best Sellers</a></li>
-          <li><a class="footer__link" href="#shop">Necklaces</a></li>
-          <li><a class="footer__link" href="#shop">Rings</a></li>
-          <li><a class="footer__link" href="#shop">Earrings</a></li>
-          <li><a class="footer__link" href="#shop">Bracelets</a></li>
+  <footer class="footer container">
+    <div class="footer__menu">
+      <nav class="footer__column footer__column--wide" aria-labelledby="footer-shop">
+        <h2 class="footer__heading" id="footer-shop">Shop By</h2>
+        <ul class="footer__list footer__list--split">
+          <li><a class="footer__link" href="#">Necklaces</a></li>
+          <li><a class="footer__link" href="#">Earrings</a></li>
+          <li><a class="footer__link" href="#">Best Sellers</a></li>
+          <li><a class="footer__link" href="#">Rings</a></li>
+          <li><a class="footer__link" href="#">Bracelets</a></li>
+          <li><a class="footer__link" href="#">New Arrivals</a></li>
         </ul>
-      </section>
-      <section class="footer__col">
-        <h2 class="footer__heading">Support</h2>
+      </nav>
+      <nav class="footer__column" aria-labelledby="footer-support">
+        <h2 class="footer__heading" id="footer-support">Support</h2>
         <ul class="footer__list">
           <li><a class="footer__link" href="#">Product care</a></li>
+          <li><a class="footer__link" href="#">Returns, shipping &amp;&nbsp;pricing</a></li>
           <li><a class="footer__link" href="#">FAQ</a></li>
-          <li><a class="footer__link" href="#">Returns, shipping &amp; pricing</a></li>
         </ul>
-      </section>
-      <section class="footer__col">
-        <h2 class="footer__heading">About</h2>
+      </nav>
+      <nav class="footer__column" aria-labelledby="footer-myel">
+        <h2 class="footer__heading" id="footer-myel">MYEL</h2>
         <ul class="footer__list">
-          <li><a class="footer__link" href="#about">Ethical stones</a></li>
+          <li><a class="footer__link" href="#">About</a></li>
           <li><a class="footer__link" href="#">Journal</a></li>
+          <li><a class="footer__link" href="#">Ethical stones</a></li>
           <li><a class="footer__link" href="#">Terms &amp; privacy</a></li>
         </ul>
-      </section>
-      <section class="footer__col">
-        <h2 class="footer__heading">Visit</h2>
+      </nav>
+      <nav class="footer__column" aria-labelledby="footer-visit">
+        <h2 class="footer__heading" id="footer-visit">Visit</h2>
         <ul class="footer__list">
-          <li><a class="footer__link" href="#">Contact</a></li>
           <li><a class="footer__link" href="#">The Store</a></li>
+          <li><a class="footer__link" href="#">Contact</a></li>
         </ul>
-      </section>
-      <section class="footer__col">
-        <h2 class="footer__heading">Social</h2>
-        <ul class="footer__list">
-          <li><a class="footer__link" href="#">Instagram</a></li>
-          <li><a class="footer__link" href="#">Facebook</a></li>
-        </ul>
-      </section>
+      </nav>
     </div>
+
     <div class="footer__bottom">
-      <p class="footer__copy">All rights reserved. © 2021 — MYEL</p>
-      <p class="footer__credits">Web Credits — MILL3</p>
+      <div class="footer__social">
+        <h2 class="footer__social-title">Social</h2>
+        <ul class="footer__social-list">
+          <li>
+            <a class="footer__social-link" href="#" aria-label="Facebook">
+              <img src="images/icons/facebook.svg" width="10" height="17" alt="">
+            </a>
+          </li>
+          <li>
+            <a class="footer__social-link" href="#" aria-label="Instagram">
+              <img src="images/icons/instagram.svg" width="16" height="16" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="lang footer__lang">
+        <a class="lang__link" href="#" hreflang="fr">Fr</a>
+        <span class="lang__divider" aria-hidden="true">|</span>
+        <span class="lang__current">En</span>
+      </div>
+      <p class="footer__copyright">All rights reserved. © 2021 - MYEL</p>
+      <a class="footer__credits" href="#">Web Credits</a>
     </div>
   </footer>
 

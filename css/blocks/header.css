@@ -1,0 +1,73 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 88px;
+  padding-inline: 30px;
+}
+
+.header__list,
+.header__side {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  align-items: center;
+}
+
+.header__link {
+  font-size: 14px;
+  line-height: 17.5px;
+  text-transform: uppercase;
+}
+
+.header__side > .header__link {
+  justify-self: center;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 27px;
+}
+
+.header__cart {
+  /* in the mockup there is a reserved slot for search before the cart */
+  margin-left: 44px;
+  min-width: 20px;
+  font-size: 12px;
+  line-height: 13.8px;
+  text-align: center;
+}
+
+.header__lang {
+  font-size: 14px;
+  line-height: 17.5px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 16px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .header__logo {
+    order: -1;
+  }
+
+  .header__list,
+  .header__side,
+  .header__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+  }
+
+  .header__cart {
+    margin-left: 0;
+  }
+}
